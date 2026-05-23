@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Premium Weather App</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background-overlay"></div>
+  <div class="sun-glow"></div>
+
+  <div class="app-container">
+
+    <!-- TOP NAV -->
+    <header class="top-bar">
+
+      <div class="logo">
+        🌤 Weather Pro
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search city..."
+        />
+
+        <button id="searchBtn">
+          🔍
+        </button>
+      </div>
+
+      <div class="city-display">
+        📍 <span id="cityName">Mumbai</span>
+      </div>
+
+    </header>
+
+    <!-- MAIN WEATHER -->
+    <section class="hero-section">
+
+      <!-- LEFT -->
+      <div class="hero-left">
+
+        <p class="today-date" id="todayDate">
+          Thursday, 22 May
+        </p>
+
+        <h1 id="temperature">
+          30°C
+        </h1>
+
+        <h2 id="weatherCondition">
+          Haze
+        </h2>
+
+        <div class="weather-meta">
+
+          <div class="meta-card">
+            <span>💧 Humidity</span>
+            <h3 id="humidity">
+              74%
+            </h3>
+          </div>
+
+          <div class="meta-card">
+            <span>🌬 Wind</span>
+            <h3 id="wind">
+              3 m/s
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-right">
+
+        <div class="glass-card">
+          <p>Pressure</p>
+          <h2 id="pressure">1010 hPa</h2>
+        </div>
+
+        <div class="glass-card">
+          <p>Visibility</p>
+          <h2 id="visibility">4 km</h2>
+        </div>
+
+        <div class="glass-card">
+          <p>Sunrise</p>
+          <h2 id="sunrise">--</h2>
+        </div>
+
+        <div class="glass-card">
+          <p>Sunset</p>
+          <h2 id="sunset">--</h2>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FORECAST -->
+    <section class="forecast-wrapper">
+
+      <div class="section-title">
+        Forecast
+      </div>
+
+      <div class="forecast-scroll">
+
+        <div class="forecast-card">
+          <p>Yesterday</p>
+          <h3>🌧 Rainy</h3>
+          <span>27°C</span>
+        </div>
+
+        <div class="forecast-card active-card">
+          <p>Today</p>
+          <h3 id="todayCondition">
+            Haze
+          </h3>
+          <span id="todayTemp">
+            30°C
+          </span>
+        </div>
+
+        <div class="forecast-card">
+          <p>Tomorrow</p>
+          <h3>☀ Sunny</h3>
+          <span>31°C</span>
+        </div>
+
+        <div class="forecast-card">
+          <p>Weekend</p>
+          <h3>🌥 Cloudy</h3>
+          <span>29°C</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
